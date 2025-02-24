@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amit's Research</title>
+    <link rel="icon" type="image/x-icon" href="path/to/favicon.ico">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -59,6 +60,23 @@
             bottom: 0;
             width: 100%;
         }
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                padding: 10px;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode .container {
+            background-color: #1e1e1e;
+            color: #ffffff;
+        }
     </style>
 </head>
 <body>
@@ -68,37 +86,63 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Research</a>
-    <a href="#">Publications</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="container">
-    <h2>About Me</h2>
-
-    <!-- Profile Picture -->
-    <img src="https://avatars.githubusercontent.com/u/200599000?v=4" class="profile-pic" alt="Amit's Profile Picture">
-
+<div class="container" id="home">
+    <h2>Amit Chaudhari</h2>
+    <img src="https://avatars.githubusercontent.com/u/200599000?s=400&u=2855b93fc021dbe986ea963981d9db730ff81702&v=4" class="profile-pic" alt="Amit's Profile Picture">
     <p>Hello! I'm Amit, and this is my personal research page where I share my work in computational materials science.</p>
+</div>
 
+<div class="container" id="research">
     <h2>Research Interests</h2>
     <ul>
         <li>Machine learning for materials science</li>
         <li>X-ray absorption spectroscopy analysis</li>
         <li>Computational modeling and SISSO regression</li>
     </ul>
+</div>
 
+<div class="container" id="publications">
     <h2>Publications</h2>
     <p>Coming soon...</p>
+</div>
 
+<div class="container" id="contact">
     <h2>Contact</h2>
     <p>Email: your-email@example.com</p>
+    <p><a href="path/to/your-cv.pdf" download>Download CV</a></p>
+    <p>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a> |
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+    </p>
+</div>
+
+<div class="container" id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li><a href="https://github.com/yourproject" target="_blank">Project 1</a></li>
+        <li><a href="https://github.com/yourproject" target="_blank">Project 2</a></li>
+    </ul>
 </div>
 
 <footer>
-    © 2025 Amit - All Rights Reserved
+    © 2025 Amit - All Rights Reserved | <a href="privacy-policy.html" style="color: white;">Privacy Policy</a>
 </footer>
+
+<button id="theme-toggle">Toggle Dark Mode</button>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
 
 </body>
 </html>
