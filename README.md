@@ -1,4 +1,4 @@
-# Quantum Mechanical and Machine Learning Approaches for Atomistic Materials Modelling
+# Quantum Mechanical & Machine Learning Approaches for Atomistic Materials Modelling
 
 This repository contains data from publications:
 
